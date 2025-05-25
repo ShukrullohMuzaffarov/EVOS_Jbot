@@ -1,4 +1,4 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
 from  messages import messages
 
 def start_buttons(lang):
@@ -6,7 +6,8 @@ def start_buttons(lang):
         [KeyboardButton(text=f"{messages[lang]['about_company']}"),
          KeyboardButton(text=f"{messages[lang]['branches']}")],
         [KeyboardButton(text=f"{messages[lang]['job_positions']}")],
-        [KeyboardButton(text=f"{messages[lang]['menu']}"),
+        [KeyboardButton(text=f"{messages[lang]['menu']}",
+                        web_app=WebAppInfo(url="https://shukrullohmuzaffarov.github.io/EVOS_Jbot/")),
          KeyboardButton(text=f"{messages[lang]['news']}")],
         [
             KeyboardButton(text=f"{messages[lang]['contacts']}"),
