@@ -115,6 +115,22 @@ abtn4.addEventListener("click", function () {
     tg.MainButton.show();
 });
 
+// ---------5----------
+count5 = document.getElementById("count5");
+rbtn5 = document.getElementById("rbtn5");
+abtn5 = document.getElementById("abtn5");
+let num_count5 = 0
+abtn5.addEventListener("click", function (){
+    count5.innerText = num_count5 +=1;
+    count5.style.display = "inline-block";
+    tg.MainButton.setText("Оплата");
+    tg.MainButton.show();
+})
+rbtn5.addEventListener("click", function (){
+    if (num_count5>0) {
+        count5.innerText = num_count5 -= 1;
+    }
+})
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
     data = item1 + "|" + item2 + "|" + item3 + "|" + item4
